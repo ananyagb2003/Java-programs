@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the total ratings:");
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            System.out.println("Enter rating"+i+":");
+            int ratings=sc.nextInt();
+            sum+=ratings;
+        }
+        double avg=(double) sum/n;
+        int rounded=(int) Math.floor(avg);
+        System.out.println("Average rating:"+rounded);
+        for(int i=0;i<rounded;i++){
+            System.out.print("*");
+        }
+    }
+}
