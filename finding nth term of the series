@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+   static int series(int n){
+        int i,ans=0;
+        for(i=1;i<=n;i++){
+            ans+=i;
+        }
+        return ans;
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n;
+        System.out.println("Enter n:");
+        n=sc.nextInt();
+        int res=series(n);
+        System.out.println(res);
+    }
+}
