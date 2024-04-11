@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main {
+    static boolean cuberoot(int n){
+        while(n>1){
+            if(n%2!=0){
+                return false;
+            }
+            else
+                n=n/2;
+        }
+        return true;
+    }
+   public static void main(String[] args){
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter a number:");
+       int n=sc.nextInt();
+       boolean res=cuberoot(n);
+       if(res){
+           System.out.println("Yes");
+       }
+       else
+           System.out.println("No");
+    }
+}
