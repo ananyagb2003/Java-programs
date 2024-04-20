@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main{
+    public static void main(String[] args){
+        int i,j,n;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter n:");
+        n=sc.nextInt();
+        for(i=0;i<2*n;i++){
+            int formula=i>n?2*n-i:i;
+
+                for(j=0;j<formula;j++){
+                    System.out.print("* ");
+
+            }
+            System.out.println();
+        }
+    }
+}
+//}
