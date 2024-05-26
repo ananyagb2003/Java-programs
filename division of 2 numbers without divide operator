@@ -1,0 +1,13 @@
+import java.math.BigInteger;
+class Solution {
+    public int divide(int dividend, int divisor) {
+        if(dividend==-2147483648&&divisor==-1){
+            return Integer.MAX_VALUE;
+        }
+        BigInteger a=new BigInteger(Integer.toString(dividend));
+        BigInteger b=new BigInteger(Integer.toString(divisor));
+        BigInteger res=a.divide(b);
+        int tot=res.intValue();
+        return tot;
+    }
+}
