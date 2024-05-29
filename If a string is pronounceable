@@ -21,7 +21,7 @@ class Codechef
 		            c=0;
 		        }
 		        if(c>=4){
-		            System.out.println("NO");
+		            System.out.println("NO");  /
 		            break;
 		        }
 		    }
