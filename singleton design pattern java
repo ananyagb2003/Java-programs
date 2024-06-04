@@ -1,0 +1,35 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Singleton class
+class Singleton {
+    // Static reference to the singleton instance
+    static Singleton sref = null;
+
+    // Private constructor to prevent instantiation from outside the class
+    private Singleton() {
+        System.out.println("Inside constructor");
+    }
+
+    // Static method to get the singleton instance
+    public static Singleton myMethod() {
+        if (sref == null) {
+            sref = new Singleton();
+            return sref;
+        } else {
+            System.out.println("Object already created");
+        }
+        return sref;
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Getting the singleton instance
+        Singleton sref = Singleton.myMethod();
+        Singleton sref2 = Singleton.myMethod();
+        Singleton sref3 = Singleton.myMethod();
+    }
+}
