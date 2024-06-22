@@ -1,0 +1,35 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+// Singleton class
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String a=sc.nextLine();
+        String b=sc.nextLine();
+        StringBuilder sb=new StringBuilder();
+        int m=a.length();
+        int n=b.length();
+        int i=0,j=0;
+        while(i<m&&j<n){
+            sb.append(a.charAt(i));
+            sb.append(b.charAt(j));
+            i++;
+            j++;
+        }
+        if(i==m){
+            while(j<n){
+                sb.append(b.charAt(j));
+                j++;
+            }
+        }
+        else{
+            while(i<m){
+                sb.append(a.charAt(i));
+                i++;
+            }
+        }
+        System.out.println(sb);
+    }
+}
