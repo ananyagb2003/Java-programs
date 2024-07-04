@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main {
+   public void fib(int a,int b,int i,int n){
+       if(i==n){
+           return ;
+       }
+       int sum=0;
+       i=i+1;
+       sum+=a+b;
+       System.out.print(sum);
+        fib(b,sum,i,n);
+   }
+   public static void main(String[] args){
+       Main m=new Main();
+       System.out.print(0);
+       System.out.print(1);
+      m.fib(0,1,0,3);
+   }
+}
