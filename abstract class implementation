@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+abstract class parent{
+    abstract void age();
+    abstract void career();
+}
+class son extends parent{
+     void age(){
+        System.out.println("I am 15");
+        }
+        void career(){
+        System.out.println("I want to be a doctor");
+        }
+        }
+        class daughter extends parent{
+            void age(){
+                System.out.println("I am 20");
+            }
+            void career(){
+                System.out.println("I want to be a painter");
+            }
+        }
+
+
+class Main {
+    public static void main(String[] args){
+        son s=new son();
+        s.age();
+        s.career();
+        parent d=new daughter();
+        d.age();
+        d.career();
+    }
+}
