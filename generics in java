@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+ class mygen<T1>{
+    int val;
+    private T1 t1;
+    public mygen(T1 t1){
+        this.t1=t1;
+        }
+        public T1 gett1(){
+        return t1;
+        }
+        public void sett1(T1 t1){
+        this.t1=t1;
+        }
+        }
+class Main {
+
+    public static void main(String[] args){
+          mygen<String> test=new mygen("Myname is me");
+          String a=test.gett1();
+        System.out.println(a);
+    }
+}
