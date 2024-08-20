@@ -1,0 +1,26 @@
+import java.util.*;
+ public class Main {
+
+
+  public static void main(String[] args) {
+   Scanner sc=new Scanner(System.in);
+   int a=sc.nextInt();
+   String str=sc.next();
+   int m=sc.nextInt();
+   Student s = new Student(a,str,m);
+   System.out.println(s.rno);
+   System.out.println(s.name);
+   System.out.println(s.marks);
+  }
+ }
+ class Student{
+  int rno;
+  String name;
+  int marks;
+
+  Student(int r,String n,int m) {
+   this.rno = r;                   //this is referenceing the object 's' in main
+   this.name =n;
+   this.marks =m;
+  }
+ }
