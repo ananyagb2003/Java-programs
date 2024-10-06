@@ -1,0 +1,31 @@
+class Result {
+    public static String timeConversion(String s) {
+    // Write your code here
+    String str="";
+    StringBuilder sb=new StringBuilder();
+      if(s.substring(0,2).equals("12")&&s.contains("PM")){
+          return s.substring(0,s.length()-2);
+      }
+    if(s.substring(0,2).equals("12")&&s.contains("AM")){
+        str="00";
+        s=str+s.substring(2,s.length()-2);
+        return s;
+    }
+    if(!s.substring(0,2).equals("12")&&s.contains("AM")){
+        return s.substring(0,s.length()-2);
+    }
+    if(!s.substring(0,2).equals("12")&&s.contains("PM")){
+        for(int i=0;i<2;i++){
+            sb.append(s.charAt(i));
+        }
+        String st=sb.toString();
+         int val = Integer.valueOf(st);
+         int a=val+12;
+         String b=Integer.toString(a);
+         s=b+s.substring(2,s.length()-2);
+         
+    }
+        return s;
+    }
+
+}
