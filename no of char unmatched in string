@@ -1,0 +1,16 @@
+public static int marsExploration(String s) {
+    // Write your code here
+          String str="SOS";
+          int count=0;
+          for(int i=0;i<s.length();i++){
+              int j=i%str.length();
+              if(s.charAt(i)==str.charAt(j)){
+                  continue;
+              }
+              else{
+                  count++;
+              }
+    }
+       return count;
+}
+}
