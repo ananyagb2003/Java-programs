@@ -1,0 +1,16 @@
+public static String hackerrankInString(String s) {
+    // Write your code here
+          String str="hackerrank";
+          int i=0;
+         for(int j=0;j<s.length();j++){
+             if(i<str.length()&&s.charAt(j)==str.charAt(i)){
+                 i++;
+             }
+             if(i==str.length()){
+                return "YES"; 
+             }
+         }
+         return "NO";
+    }
+
+}
