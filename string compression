@@ -1,0 +1,21 @@
+class Solution {
+    public int compress(char[] chars) {
+        int right=0,left=0,k=0;
+        int n=chars.length;
+        while(right<n){
+            while(right<n&&chars[right]==chars[left]){
+                right++;
+            }
+            chars[k++]=chars[left];
+            int num=right-left;
+            if(num>1){
+                String co=Integer.toString(num);
+                for(char c:co.toCharArray()){
+                    chars[k++]=c;
+                }
+            }
+            left=right;
+        }
+        return k;
+    }
+}
