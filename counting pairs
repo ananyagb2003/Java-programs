@@ -1,0 +1,24 @@
+public static int sockMerchant(int n, List<Integer> ar) {
+    // Write your code here
+            int a[]=new int[ar.size()];
+           for(int i=0;i<a.length;i++){
+            a[i]=ar.get(i);
+           }
+           Arrays.sort(a);
+           int count=1;
+           int sum=0;
+           for(int i=1;i<a.length;i++){
+            if(a[i]==a[i-1]){
+                count++;
+            }
+            else{
+            
+           
+                sum+=count/2;
+                count=1;
+             }
+    }
+          sum+=count/2;
+          return sum;
+    }
+}
