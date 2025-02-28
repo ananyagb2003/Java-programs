@@ -1,0 +1,30 @@
+class Result {
+
+    /*
+     * Complete the 'circularArrayRotation' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER_ARRAY a
+     *  2. INTEGER k
+     *  3. INTEGER_ARRAY queries
+     */
+
+    public static List<Integer> circularArrayRotation(List<Integer> a, int k, List<Integer> queries) {
+    // Write your code here
+           int n=a.size();
+           int[] rot=new int[n];
+           for(int i=0;i<n;i++){
+            rot[(i+k)%n]=a.get(i);
+           }
+           ArrayList<Integer> res=new ArrayList<>();
+           for(int i=0;i<queries.size();i++){
+            
+            int ind=queries.get(i);
+            res.add(rot[ind]);
+           }
+           
+           return res;
+    }
+
+}
