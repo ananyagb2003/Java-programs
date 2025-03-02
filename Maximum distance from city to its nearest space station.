@@ -1,0 +1,24 @@
+public class Solution {
+
+    // Complete the flatlandSpaceStations function below.
+    static int flatlandSpaceStations(int n, int[] c) {
+    int m=c.length;
+    if(n!=m){
+        
+        ArrayList<Integer>list1=new ArrayList<>();
+        for(int i=0;i<n;i++){
+            int mindis=Integer.MAX_VALUE;
+            for(int j=0;j<m;j++){
+                int r=Math.abs(c[j]-i);
+                mindis=Math.min(r,mindis);
+            }
+            
+            list1.add(mindis);
+        }
+        return Collections.max(list1);
+    }
+    else{
+        return 0;
+    }
+
+    }
