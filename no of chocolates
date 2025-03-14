@@ -1,0 +1,14 @@
+public static int chocolateFeast(int n, int c, int m) {
+    // Write your code here
+    
+        int cho=n/c;
+        int w=cho;
+        while(w>=m){
+            int nchoco=w/m;
+            cho+=nchoco;
+            w=(w%m)+nchoco;
+        }
+        return cho;
+    }
+
+}
